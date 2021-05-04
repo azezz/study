@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utg-8">
+        <title>document</title>
+        <style type="text/css">
+            *{
+                margin:0;
+                passing:0;
+            }        
+            ul{
+                list-style: none;
+            }
+            li{
+                margin:0 10px;
+                float:left;
+                color:#f40;
+                font-weight: bold;
+                font-size: 14px;
+                height:25px;
+                line-height: 25px;
+                padding: 0 5px;
+            }
+            li:hover{
+                border-radius:15px;
+                background-color: #f40;
+                color:#fff;
+            }
+
+        </style>
+    </head>
+    <head>
+        &lt; &gt; &nbsp;
+        <br />
+        <hr />
+
+        <!--有序列表-->
+        <ol><!-- type="I" 1 a A i  按照不同顺序排序-->
+            <!-- reversed="reversed" 倒叙显示-->
+            <!--start="2" 填数字就从第几开始排序-->
+            <li>one</li>
+            <li>two</li>
+        </ol>
+
+        <!--无序列表-->
+        <ul><!--type="disc"默认实心圆 只有这一个属性可更改-->
+            <!-- square 方块；circle 圈；-->
+            <li>天猫</li>
+            <li>聚划算</li>
+            <li>天猫超市</li>
+        </ul><!--父子结构;譬喻菜单栏-->       
+
+        <img src="">
+        <!--1.网上URL：http://
+            2.本地绝对路径 D:/a/b/123.jpg
+            3.本地的相对路径 123.jpg 俩文件处于相同路径
+        -->
+        <!--
+            alt="这是图片"图片占位符 当图片地址出问题展示
+            title="这是图片" 图片提示符 鼠标放上显示
+        -->
+
+        <a herf=""></a>
+        <!--1.超链接
+            2.锚点
+            3.发邮件打电话
+            4.协议限定符
+            anchorc -- 锚
+            hyperText reference 超文本引用
+
+            target="_blank" 新标签页面打开
+            herf="tel:12312341234"  打电话
+            herf="mailto:123@123.com" 发邮件
+            herf="javascript:"
+        -->
+
+        <form method="GET" action="http://"><!--发送数据的方式 发送数据给谁-->
+            <p>
+                username:<input type="text" name="username" value="请输入用户名" >
+            </p>
+            <p>
+                password:<input type="password">
+            </p>
+            <input type="radio" name="star" value="0" checked="checked"><!--单选框-->
+            <input type="radio" name="star" value="1">1
+            <input type="radio" name="star" value="2">2
+
+            <select name="province"><!--下拉菜单-->
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+            </select>
+
+            <input type="submit" name="password">
+        </form>
+        <!--
+            type="checkbox" 复选框
+            checked="checked" 默认选中
+        -->
+
+    </head>
+</html>

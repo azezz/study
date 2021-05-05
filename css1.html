@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css1</title>
+    </head>
+    <body>
+        <div>浏览器内核
+            IE              TRIDEN
+            FIREFOX         GECKO
+            GOOGLE CHROME   WEBKET/BLINK
+            SAFARI          WEBKIT
+            OPERA           PRESTO
+        </div>
+
+        <div>
+            command+? 注释
+        </div>
+
+        <div>
+            结构(html)+样式(css)+行为(javascript)
+        </div>
+        <div>
+            异步的 两件事一块干
+
+            同步的 先干一件再干一件
+        </div>
+
+        <div>
+            cascading style sheet
+            层递样式表
+        </div>
+
+        <!-- 引入css -->
+        <!-- 1.行间样式 -->
+        <div style=" "></div>
+        <!-- 2.页面级 head标签里写 -->
+        <style type="text/css"></style>
+        <!-- 3.外部css文件 head标签里写-->
+        <link rel="stylesheet" type="text/css" href="1.css">
+        
+        <!-- id选择器 -->
+        <div id=“only”>
+            引用方法
+            #only {
+
+            }
+            一个id对应一个
+        </div>
+        <!-- class选择器 -->
+        <div class="demo demo1" >
+            引用方法
+            .demo {
+
+            }
+            可同时引用两个 中间用空格隔开
+        </div>
+        <!-- 标签选择器 -->
+        引用方法
+        div {
+
+        }
+        <!-- 通配符选择器 -->
+        * {
+
+        }
+        <!-- 属性选择器 -->
+        [class="only">]
+
+        <!-- 优先级
+        !important > 行间样式 > id > class ｜ 属性选择器 （谁写在前谁执行）> 标签选择器 > 通配符 
+        -->
+
+        <!-- css权重 256进制
+        !important        infinity（正无穷）
+        行间样式             1000
+        id                  100
+        class｜属性｜伪累     10
+        标签选择器            1
+        通配符               0 
+        -->
+        
+    </body>
+</html>

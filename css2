@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css2</title>
+    </head>
+    <body>
+        <!-- 优先级
+        !important > 行间样式 > id > class ｜ 属性选择器 （谁写在前谁执行）> 标签选择器 > 通配符 
+        -->
+
+        <!-- css权重 256进制
+        !important        infinity（正无穷）
+        行间样式             1000
+        id                  100
+        class｜属性｜伪类     10
+        标签选择器            1
+        通配符               0 
+        -->
+
+        <!-- <div class="wrapper">
+            <span class="box">12</span>
+            <strong>
+                <span>123</span>
+            </strong>
+        </div>
+         父子选择器（不限其他选择器）
+        div span{
+
+        } 
+        .wrapper span{
+
+        } 
+        直接子元素选择器
+        div > span {
+
+        } -->
+        
+        <!-- 浏览器遍历数据是从右向左 -->
+        
+        <!-- <div>1</div>
+        <div class="demo">2</div>
+        <p>2</p>
+        并列选择器
+        div.demo{
+
+        } 
+        同行权重相加进行比较，相同后到先至
+        -->
+
+        <em>1</em>
+        <p>2</p>
+        <span>3</span>
+
+        <!-- 分组选择器
+        em,
+        p,
+        span{
+
+        } -->
+
+        <!-- 设置字体大小时，设置的是高度 -->
+
+        <!-- arial字体 互联网通用字体 -->
+
+        <!-- transparent 透明色 -->
+
+
+
+    </body>
+</html>

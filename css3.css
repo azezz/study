@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css3</title>
+        <style type="text/css">
+        .a{
+            border: 1px solid black;
+            /* 可拆分为三个
+            border-width: 10px;
+            border-style: dotted;
+            border-color: red; 
+            */
+            text-align: left;/* 对齐方式 */
+            width: 620px;
+            height: 100px;
+            line-height: 100px;/* 文字高度等于容器高度，是单行文本垂直居中。*/
+        }
+        .b{
+            border: 1px solid black;
+            text-align: left;
+            width: 620px;
+            height: 100px;
+            text-indent: 2em;/*首行缩进*/
+
+            /* 1 em = 1 * font-size；= 16px */
+        }
+        .c{
+            text-decoration: line-through;/* 可以填none */
+        }
+        .d{
+            text-decoration: underline;
+            color: rgb(0, 0 , 238);
+            cursor: pointer;/*当鼠标放上显示光标类型*/
+        }
+
+        /*伪类选择器*/
+        a:hover{
+            background-color: #ff4400;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: Arial;
+            border-radius: 10px;/*圆角*/
+            text-decoration: underline；/*下划线*/
+        }
+        /* 格式为  选择器 ：hover 鼠标放上显示 */
+
+        /* 
+        1.行级元素、内联元素 inline
+        feature：内容决定所占位置
+                不可以通过css改变宽高
+            span strong em a del
+        2.块级元素 block
+        feature：独占一行
+                可以通过css改变宽高 
+            div p ul li ol form address
+        3.行级块元素 inline-block
+        feature：内容决定所占位置
+                可以通过css改变宽高
+            img
+        由display控制
+        span{
+            display:inline;
+        }
+        div{
+            display:block;
+        }
+        img{
+            display:inline-block;
+        }        
+        */
+
+        .e{
+            width: 320px;
+            height: 202px;
+            
+        }
+        /* 凡是带有inline的元素都有文字特性.
+        所以解决方法时删除中间空格和回车。空格占4px。
+        上传代码会被压缩，防止用户网慢，会去空格去回车。若使用代码缩进-4px，会导致出现线上情况不准确*/
+
+
+        /* 编程方式 先定义功能,后选配功能 */
+        .green{
+            background-color: green;
+        }
+        .red{
+            background-color: red;
+        }
+        .size1{
+            width:100px;
+            height: 200px;
+        }
+        .size2{
+            width: 100px;
+            height: 50px;
+        }
+
+        /* 自定义标签功能，初始化功能 */
+        em{
+            font-style: normal;
+        }
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* 盒子模型 */
+        /* 
+         盒子的组成部分
+        盒子璧border
+        内边距padding
+        盒子内容width+height
+        
+        外边距margin
+
+        margin+border+padding+（content=width+height） 
+        */
+
+        .f,.e{
+            width: 100px;
+            height: 100px;
+            background-color: #ff4400;
+            /* padding: 100px 150px 200px 250px;上右下左 */
+            /* padding: 100px 150px 200px；上 左右 下 */
+            /* padding: 100px 150px;上下 左右 */
+            /* padding-top: 10px;上
+            padding-right: 10px;右
+            padding-bottom: 10px;下
+            padding-left: 10px;左 */
+        }
+
+        body{/* 默认为8px */
+            margin: 0px;
+        }
+
+        
+        /* 定位 */
+        .f{
+            position: absolute;/* 绝对定位，脱离原位置进行定位。 
+                                    最近的有定位的父级进行定位，如果没有就相对于文档进行定位*/
+            left: 200px;
+            top: 200px;
+
+            opacity: 0.5;/* 透明度 值在0——1之间 */
+        }
+
+        .e{
+            position: relative;/* 相对定位，保留原来位置进行定位。相对于自己原来位置进行定位 */
+            left: 10px;
+            top: 10px;
+
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 用relative作为参照物，用absolute定位。 */
+
+        .g{
+            position:fixed;/*固定定位*/
+            left: 100px;
+            top: 100px;
+
+            width: 50px;
+            height: 200px;
+            background-color: #ff4400;
+            color: #fff;
+        }
+
+        .h{
+            position: fixed;/* absoulute相对于整个文档居中*/
+            left: 50%;
+            top:50%;
+
+            width: 200px;
+            height:200px;
+            background:#ff4400;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+
+        z-index: 1;/*设置层数，越大越靠上*/
+        border-radius：50%；/*圆角*/
+
+
+
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="a">
+            每座老建筑都如同一位阅历丰富的老者，历尽了无数岁月的洗礼，沉淀出磅礴的气质。
+        </div>
+        <div class="b">
+            想要读懂一座城市，不妨先从一栋栋饱含沧桑的老建筑读起。
+        </div>
+
+        <del>50¥</del>
+        <span class="c">50¥</span>
+
+        <a href="www.baidu.com">baidu</a>
+        <span class="d">baidu</span>
+
+        <a href="https://www.baidu.com">baidu</a>
+
+        <img src="01.jpeg" class="e">
+        <img src="01.jpeg" class="e">
+        <br>
+        <img src="01.jpeg"><img src="01.jpeg">
+
+        <div class="red size1"></div>
+        <div class="green size2"></div>
+
+        <div class="f"></div>
+        <div class="e"></div>
+        <div class="g">012345</div>
+        <div class="h">012345</div>
+    </body>
+</html>

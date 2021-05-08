@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css4</title>
+        <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .right{
+            position: absolute;
+            right: 0px;
+            width: 100px;
+            height:100px;
+            background-color: #ffcccc;
+            opacity:0.5;
+        }
+        .left{
+            margin-right: 100px;
+            height: 100px;
+            background-color: seagreen;
+        }
+        
+        .wrapper{
+            margin-left: 100px;
+            margin-top: 100px;
+            width: 100px;
+            height:100px;
+            background-color: red;
+        }
+        .content{
+            margin-left: 50px;
+            margin-top: 60px;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+        }
+        .box1{
+            background-color: red;
+            margin-right: 100px;
+        }
+        .box2{
+            background-color: green;
+            margin-left: 100px;
+        }
+        .demo1{
+            background-color: red;
+            margin-bottom: 100px;
+        }
+        .demo2{
+            background-color: green;
+            margin-top: 100px;
+        }
+        .warpper1{
+            overflow: hidden;
+        }
+
+        .warpper2{
+            width: 350px;
+            height: 300px;
+            border:1px solid red;
+        }
+        .content1{
+            float: left;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            color: #fff;
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        .p{
+            clear: both;
+        }
+
+        .wrapper2::after{
+            content: none;
+            clear: none;
+            display: block;
+        }
+
+
+        /* 伪元素 天生存在于每个标签内 */
+        /* 每个标签在生成的时候，逻辑的最前端和逻辑的最后端就有两个伪元素 */
+        /* 伪元素为行级元素 */
+        span::before{
+            content: none;
+        }
+        span::after{
+            content: none;
+
+        }
+        
+
+
+
+        </style>
+    </head>
+    <body>
+        <!-- 两栏布局,要先写右后写左 -->
+        <div class="right"></div>
+        <div class="left"></div>
+
+        <div>两个bug
+        1.父子嵌套，垂直方向margin黏合一起取最大值。margin塌陷
+        解决方案 bfc
+        block format context 块级格式化上下文 
+        触发
+        （1）position：absolute；设置定位自然变成bfc规则
+        （2）display：inline-block；
+        （3）float：left/right；浮动
+        （4）overflow：hidden；溢出盒子部分隐藏</div>
+        
+        <div class="wrapper">
+            <div class="content"></div>
+        </div>
+
+        2.兄弟结构垂直方向margin合并的
+        解决方案 通过数学计算解决，不添加结构
+
+        <span class="box1">12</span>
+        <span class="box2">12</span>
+        <div class="demo1">12</div>
+        <div class="demo2">12</div>
+
+        浮动
+        float：left/right
+        left 打左面站队，而且可以添加margin间隔
+        <div class="wrapper2">
+            <div class="content1">1</div>
+            <div class="content1">2</div>
+            <div class="content1">3</div>
+            <p class="p"></p>
+        </div>
+        
+        浮动元素产生了浮动流
+        所有产生浮动流的元素，块级元素看不到他们
+        产生了bfc的元素和文本类属性的元素以及文本都能看到浮动元素
+
+        块级父元素如何包住浮动元素
+        解决方案：增加p标签添加clear清除浮流，虽然解决，但添加了html结构，所以不能使用
+                1.通过伪类添加clear清除浮流，但注意clear只对块级元素起作用
+        
+
+        凡是设置了position：abolute；flost：left/right；
+        系统内部把元素转换为inline-block元素
+        
+        
+        <span> </span>
+
+        文字环绕图片通过浮动解决
+        <img src="02.jpeg" >123456
+
+
+
+
+
+    </body>
+</html>

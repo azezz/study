@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+        *{
+           margin: 0;
+           padding: 0; 
+        }
+        .p{
+            width: 300px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid black;
+
+            white-space: nowrap;/* 文字到边框不换行*/
+            overflow: hidden;/* 溢出部分隐藏 */
+            text-overflow: ellipsis;/*溢出部分...展示*/
+        }
+        .p2{
+            width: 300px;
+            height: 40px;
+            line-height: 20px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .d{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-image: url(01.jpeg);/* 背景图片 */
+            background-size: 300px 300px;/*设置图片大小*/
+            background-repeat: no-repeat;/*repeat默认图片比盒子小复制图片铺满，no-repeat 不平铺*/
+            background-position: 10px 10px;/*设置图片位置，x轴y轴；center center 居中*/
+        }
+        .a{
+            display: inline-block;
+            text-decoration: none;
+            color: #424242;
+            width: 190px;
+            height: 140px;
+            background-image: url(01.jpeg);
+            background-size: 190px 140px;
+
+            /* 方法一  text-indent: 200px;
+            white-space: nowrap;
+            overflow: hidden; */
+
+            /* 方法二 height: 0px;
+            padding-top: 140px;
+            overflow: hidden; */
+
+        }
+
+        </style>
+    </head>
+    <body>
+        文字溢出容器，要打点（...）展示
+        1.单行文本
+        2.多行文本 不做打点做截断,溢出部分隐藏
+
+        <p class="p">新视角，领略不一样的建筑风情，改变正在悄悄开始。</p>
+
+        <p class="p2">每座老建筑都如同一位阅历丰富的老者，历尽了无数岁月的洗礼，沉淀出磅礴的气质。</p>
+
+        背景图片
+        <div class="d"></div>
+
+        图片如何由文字代替
+        <a href="01.jpeg" class="a" target="_blank_">淘宝网</a>
+
+        行级元素只能嵌套行级元素
+        块级元素可以嵌套任何元素
+        p标签里不能嵌套div 块级元素
+        a标签不能嵌套a标签
+    </body>
+</html>

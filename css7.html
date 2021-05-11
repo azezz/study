@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .warpper{
+                height: 30px;
+                background-color: #ff4400;
+            }
+            .content{
+                margin: 0 auto;/* auto 自适应 */
+                width: 1200px;
+                height: 30px;
+                background-color: black;
+            }
+            .s{
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                background-color: #f40;
+                font-size: 50px;
+                vertical-align: -10px;/* 调整对齐位置  middle 中对齐  */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content"></div>
+        </div>
+
+        inline inline-block --》文本类元素
+       能被文字分隔符分割
+
+       一旦行级块元素内有文字就会和内部文字底对齐
+       若无文字则和底部对齐
+
+       <span class="s">123</span>123
+
+    </body>
+</html>
